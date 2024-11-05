@@ -1284,7 +1284,8 @@ class Results
             $specialIndex = $sortExpressionNoDirection[0] == ''
                 ? 0
                 : count($sortExpressionNoDirection);
-            $sortExpressionNoDirection[$specialIndex] = Util::backquote($currentName);
+            $tableName = $sortTable === '' ? '' : Util::backquote($sortTable) . '.';
+            $sortExpressionNoDirection[$specialIndex] = $tableName . Util::backquote($currentName);
             // Set the direction to the config value
             $sortDirection[$specialIndex] = $this->config->settings['Order'];
             // Or perform SMART mode
@@ -1314,13 +1315,16 @@ class Results
                 $sortOrder .= Util::backquote($tableAndColumn[0]) . '.' . Util::backquote($expression);
             } else {
                 $expression = $tableAndColumn[0];
-                $sortOrder .= Util::backquote($sortTable) . '.' . Util::backquote($expression);
+                $sortOrder .= Util::backquote($expression);
             }
 
             // Incase this is the current column save $single_sort_order
             if ($currentName === $expression) {
                 $singleSortOrder = 'ORDER BY ';
-                $singleSortOrder .= Util::backquote($sortTable) . '.';
+                if ($sortTable !== '') {
+                    $singleSortOrder .= Util::backquote($sortTable) . '.';
+                }
+
                 $singleSortOrder .= Util::backquote($currentName) . ' ';
 
                 if ($isInSort) {
