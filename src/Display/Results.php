@@ -675,7 +675,7 @@ class Results
      *
      * @see getTableHeaders()
      *
-     * @param mixed[]            $sortExpression            sort expression
+     * @param string[]           $sortExpression            sort expression
      * @param array<int, string> $sortExpressionNoDirection sort expression
      *                                                        without direction
      * @param mixed[]            $sortDirection             sort direction
@@ -775,7 +775,7 @@ class Results
      *
      * @see getTable()
      *
-     * @param mixed[]            $sortExpression            sort expression
+     * @param string[]           $sortExpression            sort expression
      * @param array<int, string> $sortExpressionNoDirection sort expression without direction
      * @param mixed[]            $sortDirection             sort direction
      * @param bool               $isLimitedDisplay          with limited operations or not
@@ -1159,7 +1159,7 @@ class Results
      * @see getTableHeaders()
      *
      * @param FieldMetadata      $fieldsMeta                set of field properties
-     * @param mixed[]            $sortExpression            sort expression
+     * @param string[]           $sortExpression            sort expression
      * @param array<int, string> $sortExpressionNoDirection sort expression without direction
      * @param int                $sessionMaxRows            maximum rows resulted by sql
      * @param string             $comments                  comment for row
@@ -1260,7 +1260,7 @@ class Results
     /**
      * Prepare parameters and html for sorted table header fields
      *
-     * @param mixed[]            $sortExpression            sort expression
+     * @param string[]           $sortExpression            sort expression
      * @param array<int, string> $sortExpressionNoDirection sort expression without direction
      * @param string             $sortTable                 The name of the table to which
      *                                                      the current column belongs to
@@ -1354,10 +1354,10 @@ class Results
      *
      * @see getTableHeaders()
      *
-     * @param mixed[] $sortExpression            sort expression
-     * @param mixed[] $sortExpressionNoDirection sort expression without direction
-     * @param string  $sortTable                 the table name
-     * @param string  $nameToUseInSort           the sorting column name
+     * @param string[] $sortExpression            sort expression
+     * @param string[] $sortExpressionNoDirection sort expression without direction
+     * @param string   $sortTable                 the table name
+     * @param string   $nameToUseInSort           the sorting column name
      */
     private function isInSorted(
         array $sortExpression,
