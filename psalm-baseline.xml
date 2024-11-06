@@ -4863,7 +4863,7 @@
   </file>
   <file src="src/Display/Results.php">
     <ArgumentTypeCoercion>
-      <code><![CDATA[$sortDirection]]></code>
+      <code><![CDATA[$o->type]]></code>
     </ArgumentTypeCoercion>
     <InvalidArgument>
       <code><![CDATA[$expressions]]></code>
@@ -4871,7 +4871,6 @@
       <code><![CDATA[$expressions]]></code>
       <code><![CDATA[$linkingUrlParams]]></code>
       <code><![CDATA[$linkingUrlParams]]></code>
-      <code><![CDATA[$sortExpressionNoDirection]]></code>
     </InvalidArgument>
     <InvalidArrayOffset>
       <code><![CDATA[$GLOBALS['is_header_sent']]]></code>
@@ -5084,7 +5083,6 @@
     </PossiblyNullArrayAccess>
     <PossiblyNullOperand>
       <code><![CDATA[$dispval]]></code>
-      <code><![CDATA[$o->expr->expr]]></code>
     </PossiblyNullOperand>
     <PossiblyNullPropertyFetch>
       <code><![CDATA[$lexer->list[0]->type]]></code>
