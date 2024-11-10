@@ -4862,9 +4862,6 @@
     </MixedReturnTypeCoercion>
   </file>
   <file src="src/Display/Results.php">
-    <ArgumentTypeCoercion>
-      <code><![CDATA[$o->type]]></code>
-    </ArgumentTypeCoercion>
     <InvalidArgument>
       <code><![CDATA[$expressions]]></code>
       <code><![CDATA[$expressions]]></code>
