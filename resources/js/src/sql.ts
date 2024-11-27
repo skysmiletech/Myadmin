@@ -1272,6 +1272,7 @@ function checkSavedQuery () {
     let buttonGetAutoSavedQuery = $('#saved');
 
     let isAutoSavedInLocalStorage = isStorageSupported('localStorage') && (typeof window.localStorage.getItem(key) === 'string');
+    // @ts-ignore
     let isAutoSavedInCookie = window.Cookies.get(key, { path: CommonParams.get('rootPath') });
 
     if (isAutoSavedInLocalStorage || isAutoSavedInCookie) {
