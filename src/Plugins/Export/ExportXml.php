@@ -313,7 +313,7 @@ class ExportXml extends ExportPlugin
 
             if (isset($GLOBALS['xml_export_events']) && $GLOBALS['xml_export_events']) {
                 // Export events
-                $events = $dbi->fetchResultSimple(
+                $events = $dbi->fetchSingleColumn(
                     'SELECT EVENT_NAME FROM information_schema.EVENTS '
                     . 'WHERE EVENT_SCHEMA=' . $dbi->quoteString(Current::$database),
                 );
