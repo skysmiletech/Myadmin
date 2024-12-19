@@ -2343,9 +2343,6 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Controllers/Server/Variables/GetVariableController.php">
-    <PossiblyNullArrayAccess>
-      <code><![CDATA[$varValue[1]]]></code>
-    </PossiblyNullArrayAccess>
     <PossiblyUnusedMethod>
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
@@ -2357,9 +2354,6 @@
     <PossiblyNullArgument>
       <code><![CDATA[$varValue[1]]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullArrayAccess>
-      <code><![CDATA[$varValue[1]]]></code>
-    </PossiblyNullArrayAccess>
     <PossiblyUnusedMethod>
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
@@ -9199,10 +9193,6 @@
       <code><![CDATA[$row['Table_name']]]></code>
       <code><![CDATA[$row['Table_priv']]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullArrayAccess>
-      <code><![CDATA[$row1['Type']]]></code>
-      <code><![CDATA[$row['@@old_passwords']]]></code>
-    </PossiblyNullArrayAccess>
     <PossiblyNullArrayOffset>
       <code><![CDATA[$columns]]></code>
       <code><![CDATA[$columns]]></code>
