@@ -6302,7 +6302,6 @@
       <code><![CDATA[$cols['pk']]]></code>
       <code><![CDATA[$dropCols['nonpk']]]></code>
       <code><![CDATA[$dropCols['pk']]]></code>
-      <code><![CDATA[$res[0][$column . '_cnt']]]></code>
     </MixedArrayAccess>
     <MixedAssignment>
       <code><![CDATA[$arrDependson]]></code>
