@@ -91,13 +91,11 @@ class TableTest extends AbstractTestCase
         $fetchResultSimple = [
             [
                 $sqlAnalyzeStructureTrue,
-                null,
                 ConnectionType::User,
                 [['COLUMN_NAME' => 'COLUMN_NAME', 'DATA_TYPE' => 'DATA_TYPE']],
             ],
             [
                 'SHOW COLUMNS FROM `PMA`.`PMA_BookMark`',
-                null,
                 ConnectionType::User,
                 [
                     [
@@ -120,7 +118,6 @@ class TableTest extends AbstractTestCase
             ],
             [
                 'SHOW TRIGGERS FROM `PMA` LIKE \'PMA_BookMark\';',
-                null,
                 ConnectionType::User,
                 [
                     [
@@ -151,7 +148,6 @@ class TableTest extends AbstractTestCase
             ],
             [
                 'SHOW TRIGGERS FROM `PMA` LIKE \'PMA_.BookMark\';',
-                null,
                 ConnectionType::User,
                 [
                     [
@@ -185,7 +181,6 @@ class TableTest extends AbstractTestCase
                     . 'ACTION_STATEMENT, EVENT_OBJECT_SCHEMA, EVENT_OBJECT_TABLE, DEFINER FROM '
                     . "information_schema.TRIGGERS WHERE EVENT_OBJECT_SCHEMA COLLATE utf8_bin= 'PMA' "
                     . "AND EVENT_OBJECT_TABLE COLLATE utf8_bin = 'PMA_BookMark';",
-                null,
                 ConnectionType::User,
                 [
                     [],
@@ -196,7 +191,6 @@ class TableTest extends AbstractTestCase
                     . 'ACTION_STATEMENT, EVENT_OBJECT_SCHEMA, EVENT_OBJECT_TABLE, DEFINER FROM '
                     . "information_schema.TRIGGERS WHERE EVENT_OBJECT_SCHEMA COLLATE utf8_bin= 'aa' "
                     . "AND EVENT_OBJECT_TABLE COLLATE utf8_bin = 'ad';",
-                null,
                 ConnectionType::User,
                 [
                     [],
@@ -204,7 +198,6 @@ class TableTest extends AbstractTestCase
             ],
             [
                 'SHOW COLUMNS FROM `aa`.`ad`',
-                null,
                 ConnectionType::User,
                 [],
             ],
